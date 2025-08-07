@@ -52,7 +52,7 @@ jobs:
     - name: Update Lambda function to use ECR image
       run: |
         aws lambda update-function-code \
-          --function-name VHSlambdafunction \
+          --function-name vhs-demo-function \
           --image-uri ${{ steps.login-ecr.outputs.registry }}/${{ secrets.ECR_REPOSITORY }}:${{ github.sha }}
  
 
